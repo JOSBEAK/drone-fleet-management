@@ -42,8 +42,6 @@ The frontend is built with React. To run it separately:
 ```
 project_root/
 ├── backend/
-│   ├── __pycache__/
-│   ├── venv/
 │   ├── app.py
 │   ├── data.json
 │   ├── Dockerfile
