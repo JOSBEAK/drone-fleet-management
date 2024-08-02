@@ -2,6 +2,7 @@
 
 This project provides a web interface for managing a drone fleet, including user authentication, drone status overview, and detailed drone information.
 
+**~Note : I have added image field for the drone in the json to make it look good**
 
 ## Setup
 
