@@ -1,0 +1,349 @@
+
+ {
+  "users": [
+    {"username": "admin", "password": "password123"}
+  ],
+  "drones": [
+    {
+      "id": "Drone1",
+      "status": "Available",
+      "flight_hours": 120,
+      "battery_status": "80%",
+      "last_known_location": [40.712776, -74.005974],
+      "current_mission": "Survey field A",
+      "maintenance_logs": [
+        {"date": "2024-01-10", "description": "Battery replacement", "technician": "John Doe"},
+        {"date": "2024-02-15", "description": "Rotor inspection", "technician": "Jane Smith"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2015/12/29/13/13/drone-1112752_1280.jpg"
+    },
+    {
+      "id": "Drone2",
+      "status": "In-flight",
+      "flight_hours": 200,
+      "battery_status": "50%",
+      "last_known_location": [34.052235, -118.243683],
+      "current_mission": "Inspect irrigation system",
+      "maintenance_logs": [
+        {"date": "2024-03-05", "description": "Firmware update", "technician": "Alice Johnson"},
+        {"date": "2024-04-22", "description": "Motor calibration", "technician": "Bob Lee"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2022/03/11/15/42/drone-7062503_1280.jpg"
+    },
+    {
+      "id": "Drone3",
+      "status": "Maintenance",
+      "flight_hours": 95,
+      "battery_status": "60%",
+      "last_known_location": [41.878113, -87.629799],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2024-05-12", "description": "Propeller replacement", "technician": "Charlie Brown"},
+        {"date": "2024-06-30", "description": "GPS module repair", "technician": "Diana Prince"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2024/04/16/19/23/drone-8700690_1280.png"
+    },
+    {
+      "id": "Drone4",
+      "status": "Available",
+      "flight_hours": 150,
+      "battery_status": "90%",
+      "last_known_location": [37.774929, -122.419416],
+      "current_mission": "Map urban area",
+      "maintenance_logs": [
+        {"date": "2024-07-05", "description": "Camera calibration", "technician": "Eva Green"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/10/19/09/06/drone-3758182_1280.jpg"
+    },
+    {
+      "id": "Drone5",
+      "status": "Charging",
+      "flight_hours": 180,
+      "battery_status": "30%",
+      "last_known_location": [51.507351, -0.127758],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2024-08-12", "description": "Battery health check", "technician": "Frank Castle"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2016/10/24/00/00/drone-1765144_1280.jpg"
+    },
+    {
+      "id": "Drone6",
+      "status": "In-flight",
+      "flight_hours": 220,
+      "battery_status": "70%",
+      "last_known_location": [48.856614, 2.352222],
+      "current_mission": "Traffic monitoring",
+      "maintenance_logs": [
+        {"date": "2024-09-01", "description": "Software update", "technician": "Grace Hopper"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/33/drone-3198324_1280.jpg"
+    },
+    {
+      "id": "Drone7",
+      "status": "Available",
+      "flight_hours": 80,
+      "battery_status": "100%",
+      "last_known_location": [35.689487, 139.691706],
+      "current_mission": "Standby for emergency response",
+      "maintenance_logs": [
+        {"date": "2024-09-15", "description": "Full system check", "technician": "Hiro Nakamura"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2014/09/19/06/57/quadrocopter-451747_1280.jpg"
+    },
+    {
+      "id": "Drone8",
+      "status": "Maintenance",
+      "flight_hours": 300,
+      "battery_status": "20%",
+      "last_known_location": [19.075984, 72.877656],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2024-10-01", "description": "Motor replacement", "technician": "Indira Patel"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/11/18/14/29/drone-4634946_1280.jpg"
+    },
+    {
+      "id": "Drone9",
+      "status": "In-flight",
+      "flight_hours": 175,
+      "battery_status": "65%",
+      "last_known_location": [-33.868820, 151.209296],
+      "current_mission": "Coastal survey",
+      "maintenance_logs": [
+        {"date": "2024-10-10", "description": "Waterproofing check", "technician": "Jack Sparrow"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/10/20/16/02/drone-4564063_1280.jpg"
+    },
+    {
+      "id": "Drone10",
+      "status": "Available",
+      "flight_hours": 90,
+      "battery_status": "95%",
+      "last_known_location": [55.755826, 37.617300],
+      "current_mission": "Forest fire detection",
+      "maintenance_logs": [
+        {"date": "2024-11-05", "description": "Thermal camera installation", "technician": "Katya Volkov"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/06/30/19/27/drone-4308659_1280.jpg"
+    },
+    {
+      "id": "Drone11",
+      "status": "In-flight",
+      "flight_hours": 210,
+      "battery_status": "55%",
+      "last_known_location": [-22.906847, -43.172896],
+      "current_mission": "Beach cleanup assessment",
+      "maintenance_logs": [
+        {"date": "2024-11-20", "description": "Sand filter replacement", "technician": "Luiz Silva"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/34/drone-3198326_1280.jpg"
+    },
+    {
+      "id": "Drone12",
+      "status": "Charging",
+      "flight_hours": 130,
+      "battery_status": "40%",
+      "last_known_location": [52.520007, 13.404954],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2024-12-01", "description": "Battery efficiency test", "technician": "Markus Weber"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/34/drone-3198327_1280.jpg"
+    },
+    {
+      "id": "Drone13",
+      "status": "Available",
+      "flight_hours": 160,
+      "battery_status": "85%",
+      "last_known_location": [1.352083, 103.819836],
+      "current_mission": "Urban heat mapping",
+      "maintenance_logs": [
+        {"date": "2024-12-15", "description": "Sensor calibration", "technician": "Nadia Tan"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/06/27/18/25/drone-4302861_1280.jpg"
+    },
+    {
+      "id": "Drone14",
+      "status": "Maintenance",
+      "flight_hours": 250,
+      "battery_status": "0%",
+      "last_known_location": [25.204849, 55.270783],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2025-01-02", "description": "Full overhaul", "technician": "Omar Al-Farsi"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2021/08/10/16/48/drone-6536459_1280.jpg"
+    },
+    {
+      "id": "Drone15",
+      "status": "In-flight",
+      "flight_hours": 140,
+      "battery_status": "75%",
+      "last_known_location": [59.913869, 10.752245],
+      "current_mission": "Ice thickness monitoring",
+      "maintenance_logs": [
+        {"date": "2025-01-15", "description": "De-icing system check", "technician": "Per Olsen"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/33/drone-3198325_1280.jpg"
+    },
+    {
+      "id": "Drone16",
+      "status": "Available",
+      "flight_hours": 110,
+      "battery_status": "100%",
+      "last_known_location": [-41.286460, 174.776236],
+      "current_mission": "Sheep herd counting",
+      "maintenance_logs": [
+        {"date": "2025-02-01", "description": "AI system update", "technician": "Quinn Wilson"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/34/drone-3198326_1280.jpg"
+    },
+    {
+      "id": "Drone17",
+      "status": "In-flight",
+      "flight_hours": 190,
+      "battery_status": "60%",
+      "last_known_location": [31.230390, 121.473702],
+      "current_mission": "Air quality monitoring",
+      "maintenance_logs": [
+        {"date": "2025-02-15", "description": "Particle sensor replacement", "technician": "Rui Chen"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/03/04/15/33/drone-3198320_1280.jpg"
+    },
+    {
+      "id": "Drone18",
+      "status": "Charging",
+      "flight_hours": 170,
+      "battery_status": "25%",
+      "last_known_location": [45.464204, 9.189982],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2025-03-01", "description": "Propeller balancing", "technician": "Sofia Rossi"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2016/08/08/19/42/drone-1579119_1280.jpg"
+    },
+    {
+      "id": "Drone19",
+      "status": "Available",
+      "flight_hours": 85,
+      "battery_status": "90%",
+      "last_known_location": [28.613939, 77.209021],
+      "current_mission": "Traffic congestion analysis",
+      "maintenance_logs": [
+        {"date": "2025-03-15", "description": "Camera lens cleaning", "technician": "Taj Mehta"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2016/08/08/19/42/drone-1579119_1280.jpg"
+    },
+    {
+      "id": "Drone20",
+      "status": "Maintenance",
+      "flight_hours": 280,
+      "battery_status": "10%",
+      "last_known_location": [-34.603684, -58.381559],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2025-04-01", "description": "Navigation system upgrade", "technician": "Ursula Vega"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2015/06/01/08/14/drone-792995_1280.jpg"
+    },
+    {
+      "id": "Drone21",
+      "status": "In-flight",
+      "flight_hours": 200,
+      "battery_status": "70%",
+      "last_known_location": [30.044420, 31.235712],
+      "current_mission": "Archaeological site mapping",
+      "maintenance_logs": [
+        {"date": "2025-04-15", "description": "Dust filter replacement", "technician": "Victor Nasser"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/11/20/04/44/drone-3826481_1280.jpg"
+    },
+    {
+      "id": "Drone22",
+      "status": "Available",
+      "flight_hours": 95,
+      "battery_status": "95%",
+      "last_known_location": [43.653226, -79.383184],
+      "current_mission": "Wildlife population survey",
+      "maintenance_logs": [
+        {"date": "2025-05-01", "description": "Thermal imaging calibration", "technician": "Wendy Chang"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2013/05/24/18/44/hexacopter-113478_1280.jpg"
+    },
+    {
+      "id": "Drone23",
+      "status": "In-flight",
+      "flight_hours": 230,
+      "battery_status": "50%",
+      "last_known_location": [-33.924869, 18.424055],
+      "current_mission": "Coastal erosion monitoring",
+      "maintenance_logs": [
+        {"date": "2025-05-15", "description": "Gyroscope recalibration", "technician": "Xolani Ndlovu"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2018/11/20/04/44/drone-3826476_1280.jpg"
+    },
+    {
+      "id": "Drone24",
+      "status": "Charging",
+      "flight_hours": 150,
+      "battery_status": "35%",
+      "last_known_location": [13.756331, 100.501765],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2025-06-01", "description": "Cooling system check", "technician": "Yuki Tanaka"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2017/10/22/15/00/drone-2878025_1280.jpg"
+    },
+    {
+      "id": "Drone25",
+      "status": "Available",
+      "flight_hours": 180,
+      "battery_status": "80%",
+      "last_known_location": [22.396428, 114.109497],
+      "current_mission": "Building facade inspection",
+      "maintenance_logs": [
+        {"date": "2025-06-15", "description": "Obstacle avoidance sensor update", "technician": "Zoe Wong"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/06/17/21/13/drone-4280956_1280.jpg"
+    },
+    {
+      "id": "Drone26",
+      "status": "Maintenance",
+      "flight_hours": 270,
+      "battery_status": "5%",
+      "last_known_location": [48.208174, 16.373819],
+      "current_mission": "N/A",
+      "maintenance_logs": [
+        {"date": "2025-07-01", "description": "Complete system overhaul", "technician": "Andreas Mueller"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2017/10/22/15/00/drone-2878025_1280.jpg"
+    },
+    {
+      "id": "Drone27",
+      "status": "In-flight",
+      "flight_hours": 160,
+      "battery_status": "65%",
+      "last_known_location": [61.218056, -149.900278],
+      "current_mission": "Glacier movement tracking",
+      "maintenance_logs": [
+        {"date": "2025-07-15", "description": "Cold weather performance check", "technician": "Bjorn Larsson"}
+      ],
+      "image": "https://cdn.pixabay.com/photo/2019/06/17/21/13/drone-4280956_1280.jpg"
+    },
+    {
+      "id": "Drone28",
+      "status": "Available",
+      "flight_hours": 100,
+      "battery_status": "100%",
+      "last_known_location": [14.599512, 120.984219],
+      "current_mission": "Disaster response readiness",
+      "maintenance_logs": [
+        {"date": "2025-08-01", "description": "Emergency beacon test", "technician": "Carla Santos"}
+      ],
+      "image":"https://cdn.pixabay.com/photo/2017/10/22/15/00/drone-2878025_1280.jpg"
+    }
+]
+ }
+
+
