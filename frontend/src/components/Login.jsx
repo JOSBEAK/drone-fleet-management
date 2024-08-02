@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login({ onLogin, isDarkMode }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const validateInput = (input) => {
     return input.replace(/<[^>]*>/g, "").trim();
   };
@@ -37,6 +38,7 @@ export default function Login({ onLogin, isDarkMode }) {
       const data = await response.json();
       if (data.success) {
         onLogin();
+        navigate("/drones");
       } else {
         setError("Invalid username or password");
       }
@@ -56,7 +58,7 @@ export default function Login({ onLogin, isDarkMode }) {
           isDarkMode ? "bg-gray-800" : "bg-white"
         } w-full max-w-md`}
       >
-        <h2 className="text-3xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="mb-6 text-3xl font-bold text-center">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="username" className="block mb-2 font-medium">
@@ -94,10 +96,10 @@ export default function Login({ onLogin, isDarkMode }) {
               minLength={6}
             />
           </div>
-          {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
+          {error && <p className="mb-4 text-center text-red-500">{error}</p>}
           <button
             type="submit"
-            className="w-full p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            className="w-full p-3 text-white transition duration-300 ease-in-out bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Login
           </button>

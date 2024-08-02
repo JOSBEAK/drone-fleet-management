@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  useNavigate,
+} from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import Login from "./components/Login";
 import DroneList from "./components/DroneList";
-
 import Navbar from "./components/Navbar";
+import LandingPage from "./components/LandingPage";
 import "./index.css";
 
 export default function App() {
@@ -17,7 +25,6 @@ export default function App() {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
   useEffect(() => {
     if (isLoggedIn) {
       fetchDrones(currentPage);
@@ -67,39 +74,83 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? "dark" : ""}`}>
-      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <div className="mx-auto p-4 dark:bg-gray-900 dark:text-white min-h-screen">
-        {!isLoggedIn ? (
-          <Login onLogin={handleLogin} isDarkMode={isDarkMode} />
-        ) : (
-          <>
-            {error && (
-              <div
-                className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 dark:bg-red-900 dark:text-red-100 dark:border-red-700"
-                role="alert"
-              >
-                {error}
-              </div>
-            )}
-            {loading ? (
-              <div className="text-center">
-                <div className="spinner dark:border-white"></div>
-                <p>Loading drones...</p>
-              </div>
-            ) : (
-              <DroneList
-                drones={drones}
-                onDroneSelect={handleDroneSelect}
-                isDarkMode={isDarkMode}
-                fetchDrones={fetchDrones}
-                currentPage={currentPage}
-                totalPages={totalPages}
-              />
-            )}
-          </>
-        )}
+    <Router>
+      <div className={`min-h-screen ${isDarkMode ? "dark" : ""}`}>
+        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <motion.div
+                  key="landing"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <LandingPage isDarkMode={isDarkMode} />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <motion.div
+                  key="login"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Login onLogin={handleLogin} isDarkMode={isDarkMode} />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/drones"
+              element={
+                isLoggedIn ? (
+                  <motion.div
+                    key="drones"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="min-h-screen p-4 mx-auto dark:bg-gray-900 dark:text-white"
+                  >
+                    {error && (
+                      <div
+                        className="px-4 py-3 mb-4 text-red-700 bg-red-100 border border-red-400 rounded dark:bg-red-900 dark:text-red-100 dark:border-red-700"
+                        role="alert"
+                      >
+                        {error}
+                      </div>
+                    )}
+                    {loading ? (
+                      <div className="text-center">
+                        <div className="spinner dark:border-white"></div>
+                        <p>Loading drones...</p>
+                      </div>
+                    ) : (
+                      <DroneList
+                        drones={drones}
+                        onDroneSelect={handleDroneSelect}
+                        isDarkMode={isDarkMode}
+                        fetchDrones={fetchDrones}
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                      />
+                    )}
+                  </motion.div>
+                ) : (
+                  <Navigate to="/login" replace />
+                )
+              }
+            />
+          </Routes>
+        </AnimatePresence>
       </div>
-    </div>
+    </Router>
   );
 }
